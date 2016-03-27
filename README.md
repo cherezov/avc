@@ -1,2 +1,2 @@
-# rxv
+# avc
 Python library to control Yamaha receivers over ethernet
