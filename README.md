@@ -24,21 +24,21 @@ avc.py [-i <ip> [power|mute [on|off|toggle]] | [input|scene [list|<value>]] | [v
 > python avc.py 
 Yamaha[ip='192.168.1.40', model='RX-V577']
 
--- Discover device by ip
+# Discover device by ip
 > python avc.py -i 192.168.1.40 
 Yamaha[ip='192.168.1.40', model='RX-V577']
 ```
 
 #### On/off/toggle
 ```shell
--- Power on/off
+# Power on/off
 > python avc.py -i 192.168.1.40 power on
 Power on
 
 > python avc.py -i 192.168.1.40 power toggle
 Power off
 
--- Mute
+# Mute
 > python avc.py -i 192.168.1.40 mute off
 Mute off
 
@@ -47,17 +47,17 @@ Mute on
 ```
 #### Volume
 ```shell
--- Get current volume
+# Get current volume
 > python avc.py -i 192.168.1.40 volume
 -50.5dB
 
--- Volume up
+# Volume up
 > python avc.py -i 192.168.1.40 volume +1.5
 -49dB
 ```
 #### Input
 ```shell
--- List all inputs
+# List all inputs
 > python avc.py -i 192.168.1.40 input list
 HDMI4
 AV1
@@ -74,29 +74,29 @@ AV3
 AV4
 AUX
 
--- Get current input
+# Get current input
 > python avc.py -i 192.168.1.40 input
 HDMI1
 
--- Set input
+# Set input
 > python avc.py -i 192.168.1.40 input AV1
 AV1
 ```
 
 #### Scene
 ```shell
--- List all scenes
+# List all scenes
 > python avc.py -i 192.168.1.40 scene list
 Scene 1
 Scene 2
 Scene 3
 Scene 4
 
--- Get current scene (input actually)
+# Get current scene (input actually)
 > python avc.py -i 192.168.1.40 scene
 HDMI1
 
--- Set scene
+# Set scene
 > python avc.py -i 192.168.1.40 scene Scene1
 NET RADIO
 ```
