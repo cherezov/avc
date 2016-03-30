@@ -3,8 +3,13 @@ Python library to control Yamaha receivers over ethernet
 
 __in progress__
 
-## Require
-* Python3
+## Requires
+* Python3 (Tested on Win7 python 3.4)
+
+## TODO
+[ ] Consider python 2.7 support
+
+ 
 
 ## Usage
 ### As console app
