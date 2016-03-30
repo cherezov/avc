@@ -9,11 +9,24 @@ __in progress__
 ## Usage
 ### As console app
 ```
-> avc.py 
-```
-Result
-```
+> python avc.py 
 Yamaha[ip='192.168.1.40', model='RX-V577']
+
+> python avc.py -i 192.168.1.40 
+Yamaha[ip='192.168.1.40', model='RX-V577']
+
+> python avc.py -i 192.168.1.40 volume
+-50.5dB
+
+> python avc.py -i 192.168.1.40 volume +1.5
+-49dB
+
+> python avc.py -i 192.168.1.40 input
+HDMI1
+
+> python avc.py -i 192.168.1.40 input AV1
+AV1
+
 ```
 
 ### As python module
@@ -51,7 +64,5 @@ print(c.intputs)
 
 # Set PC input
 c.input = 'HDMI1'
-
-
 
 ```
