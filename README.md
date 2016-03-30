@@ -30,7 +30,7 @@ Yamaha[ip='192.168.1.40', model='RX-V577']
 ```
 
 #### On/off/toggle
-```
+```shell
 -- Power on/off
 > python avc.py -i 192.168.1.40 power on
 Power on
@@ -46,7 +46,7 @@ Mute off
 Mute on
 ```
 #### Volume
-```
+```shell
 -- Get current volume
 > python avc.py -i 192.168.1.40 volume
 -50.5dB
@@ -56,7 +56,7 @@ Mute on
 -49dB
 ```
 #### Input
-```
+```shell
 -- List all inputs
 > python avc.py -i 192.168.1.40 input list
 HDMI4
@@ -84,7 +84,7 @@ AV1
 ```
 
 #### Scene
-```
+```shell
 -- List all scenes
 > python avc.py -i 192.168.1.40 scene list
 Scene 1
