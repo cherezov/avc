@@ -113,7 +113,7 @@ c.mute = True
 
 # Get volume
 print(c.volume)
-#Output: -55dB
+# Output: -55dB
 
 # Set volume -50.5dB
 c.volume = -50.5
