@@ -15,7 +15,7 @@ __in progress__
 ### As console app
 #### Overview
 ```
-avc.py [-i <ip> [power|mute] [on|off|toggle] | [input|scene] [list|<value>] | volume [<value>]]
+avc.py [-i <ip> [power|mute [on|off|toggle]] | [input|scene [list|<value>]] | [volume [<value>]]
 ```
 
 #### Discover
