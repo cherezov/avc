@@ -15,7 +15,7 @@ __in progress__
 ### As console app
 #### Overview
 ```
-avc.py [-i <ip> [toggle] [power|mute] [on|off] | [list] [input|scene] [<value>] | volume [<value>]]
+avc.py [-i <ip> [power|mute] [on|off|toggle] | [list] [input|scene] [<value>] | volume [<value>]]
 ```
 
 #### Discover
@@ -29,23 +29,20 @@ Yamaha[ip='192.168.1.40', model='RX-V577']
 Yamaha[ip='192.168.1.40', model='RX-V577']
 ```
 
-#### On/off
+#### On/off/toggle
 ```
 -- Power on/off
 > python avc.py -i 192.168.1.40 power on
 Power on
 
+> python avc.py -i 192.168.1.40 power toggle
+Power off
+
 -- Mute
 > python avc.py -i 192.168.1.40 mute off
 Mute off
-```
 
-#### Toggle
-```
-> python avc.py -i 192.168.1.40 toggle power
-Power off
-
-> python avc.py -i 192.168.1.40 toggle mute
+> python avc.py -i 192.168.1.40 mute toggle
 Mute on
 ```
 
