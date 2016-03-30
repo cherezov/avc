@@ -24,6 +24,13 @@ print(c.volume)
 c.volume += 1
 c.volume -= 2.5
 
+# Scenes and input mapping
+print(c.scenes)
+# Outpu: {'Scene 4': 'TUNER', 'Scene 2': 'AV1', 'Scene 1': 'HDMI1', 'Scene 3': 'NET RADIO'}
+
+# Set NET RADIO scene
+c.scene = 'Scene 3'
+
 
 
 ```
