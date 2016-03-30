@@ -12,10 +12,12 @@ __in progress__
 
 ## Usage
 ### As console app
+#### Overview
 ```
 avc.py [-i <ip> [toggle] [power|mute] [on|off] | [list] [input|scene] [<value>] | volume [<value>]]
 ```
 
+#### Discover
 ```
 -- Discover all devices
 > python avc.py 
@@ -24,7 +26,10 @@ Yamaha[ip='192.168.1.40', model='RX-V577']
 -- Discover device by ip
 > python avc.py -i 192.168.1.40 
 Yamaha[ip='192.168.1.40', model='RX-V577']
+```
 
+#### On/off
+```
 -- Power on/off
 > python avc.py -i 192.168.1.40 power on
 Power on
@@ -32,15 +37,19 @@ Power on
 -- Mute
 > python avc.py -i 192.168.1.40 mute off
 Mute off
+```
 
--- Toggle
+#### Toggle
+```
 > python avc.py -i 192.168.1.40 toggle power
 Power off
 
 > python avc.py -i 192.168.1.40 toggle mute
 Mute on
+```
 
--- List
+#### List
+```
 > python avc.py -i 192.168.1.40 list input
 HDMI4
 AV1
@@ -62,7 +71,10 @@ Scene 1
 Scene 2
 Scene 3
 Scene 4
+```
 
+#### Volume
+```
 -- Get current volume
 > python avc.py -i 192.168.1.40 volume
 -50.5dB
@@ -70,7 +82,10 @@ Scene 4
 -- Volume up
 > python avc.py -i 192.168.1.40 volume +1.5
 -49dB
+```
 
+#### Input
+```
 -- Get current input
 > python avc.py -i 192.168.1.40 input
 HDMI1
@@ -78,6 +93,11 @@ HDMI1
 -- Set input
 > python avc.py -i 192.168.1.40 input AV1
 AV1
+```
+
+#### Scene
+```
+TODO
 ```
 
 ### As python module
