@@ -32,19 +32,7 @@ Power off
 > python avc.py -i 192.168.1.40 toggle mute
 Mute on
 
--- Get current volume
-> python avc.py -i 192.168.1.40 volume
--50.5dB
-
--- Volume up
-> python avc.py -i 192.168.1.40 volume +1.5
--49dB
-
--- Get current input
-> python avc.py -i 192.168.1.40 input
-HDMI1
-
--- All inputs
+-- List
 > python avc.py -i 192.168.1.40 list input
 HDMI4
 AV1
@@ -60,6 +48,24 @@ AV2
 AV3
 AV4
 AUX
+
+> python avc.py -i 192.168.1.40 list scene
+Scene 1
+Scene 2
+Scene 3
+Scene 4
+
+-- Get current volume
+> python avc.py -i 192.168.1.40 volume
+-50.5dB
+
+-- Volume up
+> python avc.py -i 192.168.1.40 volume +1.5
+-49dB
+
+-- Get current input
+> python avc.py -i 192.168.1.40 input
+HDMI1
 
 -- Set input
 > python avc.py -i 192.168.1.40 input AV1
