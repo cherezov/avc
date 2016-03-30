@@ -7,6 +7,16 @@ __in progress__
 * Python3
 
 ## Usage
+### As console app
+```
+> avc.py 
+```
+Result
+```
+Yamaha[ip='192.168.1.40', model='RX-V577']
+```
+
+### As python module
 ```python
 c = Avc('192.168.1.40')
 
