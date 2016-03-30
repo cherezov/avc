@@ -9,7 +9,7 @@ __in progress__
 ## Usage
 ### As console app
 ```
-# Discover all devices
+// Discover all devices
 > python avc.py 
 Yamaha[ip='192.168.1.40', model='RX-V577']
 
