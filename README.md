@@ -9,22 +9,27 @@ __in progress__
 ## Usage
 ### As console app
 ```
-// Discover all devices
+-- Discover all devices
 > python avc.py 
 Yamaha[ip='192.168.1.40', model='RX-V577']
 
+-- Discover device by ip
 > python avc.py -i 192.168.1.40 
 Yamaha[ip='192.168.1.40', model='RX-V577']
 
+-- Get current volume
 > python avc.py -i 192.168.1.40 volume
 -50.5dB
 
+-- Volume up
 > python avc.py -i 192.168.1.40 volume +1.5
 -49dB
 
+-- Get current input
 > python avc.py -i 192.168.1.40 input
 HDMI1
 
+-- Set input
 > python avc.py -i 192.168.1.40 input AV1
 AV1
 
