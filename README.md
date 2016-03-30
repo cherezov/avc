@@ -15,7 +15,7 @@ __in progress__
 ### As console app
 #### Overview
 ```
-avc.py [-i <ip> [power|mute] [on|off|toggle] | [list] [input|scene] [<value>] | volume [<value>]]
+avc.py [-i <ip> [power|mute] [on|off|toggle] | [input|scene] [list|<value>] | volume [<value>]]
 ```
 
 #### Discover
@@ -45,10 +45,20 @@ Mute off
 > python avc.py -i 192.168.1.40 mute toggle
 Mute on
 ```
-
-#### List
+#### Volume
 ```
-> python avc.py -i 192.168.1.40 list input
+-- Get current volume
+> python avc.py -i 192.168.1.40 volume
+-50.5dB
+
+-- Volume up
+> python avc.py -i 192.168.1.40 volume +1.5
+-49dB
+```
+#### Input
+```
+-- List all inputs
+> python avc.py -i 192.168.1.40 input list
 HDMI4
 AV1
 AV6
@@ -64,26 +74,6 @@ AV3
 AV4
 AUX
 
-> python avc.py -i 192.168.1.40 list scene
-Scene 1
-Scene 2
-Scene 3
-Scene 4
-```
-
-#### Volume
-```
--- Get current volume
-> python avc.py -i 192.168.1.40 volume
--50.5dB
-
--- Volume up
-> python avc.py -i 192.168.1.40 volume +1.5
--49dB
-```
-
-#### Input
-```
 -- Get current input
 > python avc.py -i 192.168.1.40 input
 HDMI1
@@ -95,7 +85,20 @@ AV1
 
 #### Scene
 ```
-TODO
+-- List all scenes
+> python avc.py -i 192.168.1.40 scene list
+Scene 1
+Scene 2
+Scene 3
+Scene 4
+
+-- Get current scene (input actually)
+> python avc.py -i 192.168.1.40 scene
+HDMI1
+
+-- Set scene
+> python avc.py -i 192.168.1.40 scene Scene1
+NET RADIO
 ```
 
 ### As python module
@@ -128,7 +131,7 @@ c.scene = 'Scene 3'
 
 # Device inputs
 print(c.inputs)
-#Output:
+# Output:
 # {'HDMI4': 'HDMI4', 'TV': 'AV1', 'AV6': 'AV6', 'HDMI3': 'HDMI3', 'HDMI6': 'HDMI6', 'AV5': 'AV5', 'PC': 'HDMI1', 'HDMI2': 'HDMI2', 'USB': 'USB', 'HDMI5': 'HDMI5', 'AV2': 'AV2', 'AV3': 'AV3', 'AV4': 'AV4', 'AUX': 'AUX'}
 
 # Set PC input
