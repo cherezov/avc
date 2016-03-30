@@ -20,7 +20,7 @@ avc.py [-i <ip> [power|mute [on|off|toggle]] | [input|scene [list|<value>]] | [v
 
 #### Discover
 ```shell
--- Discover all devices
+# Discover all devices
 > python avc.py 
 Yamaha[ip='192.168.1.40', model='RX-V577']
 
