@@ -26,10 +26,18 @@ c.volume -= 2.5
 
 # Scenes and input mapping
 print(c.scenes)
-# Outpu: {'Scene 4': 'TUNER', 'Scene 2': 'AV1', 'Scene 1': 'HDMI1', 'Scene 3': 'NET RADIO'}
+# Output: {'Scene 4': 'TUNER', 'Scene 2': 'AV1', 'Scene 1': 'HDMI1', 'Scene 3': 'NET RADIO'}
 
 # Set NET RADIO scene
 c.scene = 'Scene 3'
+
+# Device inputs
+print(c.intputs)
+#Output:
+# {'HDMI4': 'HDMI4', 'TV': 'AV1', 'AV6': 'AV6', 'HDMI3': 'HDMI3', 'HDMI6': 'HDMI6', 'AV5': 'AV5', 'PC': 'HDMI1', 'HDMI2': 'HDMI2', 'USB': 'USB', 'HDMI5': 'HDMI5', 'AV2': 'AV2', 'AV3': 'AV3', 'AV4': 'AV4', 'AUX': 'AUX'}
+
+# Set PC input
+c.input = 'HDMI1'
 
 
 
