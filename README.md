@@ -7,9 +7,8 @@ __in progress__
 * Python3 (Tested on Win7 python 3.4)
 
 ## TODO
-[ ] Consider python 2.7 support
-
- 
+- [ ] Consider python 2.7 support
+- [ ] Test under linux
 
 ## Usage
 ### As console app
