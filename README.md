@@ -1,14 +1,15 @@
 # avc
-Python library to control Yamaha receivers over ethernet
+Python library to control Yamaha receivers over ethernet.
 
 __in progress__
 
 ## Requires
-* Python3 (Tested on Win7 python 3.4)
+* Python3 (Tested on Win7 python 3.4 for Yamaha RX-V577)
 
 ## TODO
 - [ ] Consider python 2.7 support
 - [ ] Test under linux
+- [ ] Add SSDP discover 
 
 ## Usage
 ### As console app
