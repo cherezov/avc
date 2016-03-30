@@ -17,6 +17,21 @@ Yamaha[ip='192.168.1.40', model='RX-V577']
 > python avc.py -i 192.168.1.40 
 Yamaha[ip='192.168.1.40', model='RX-V577']
 
+-- Power on/off
+> python avc.py -i 192.168.1.40 power on
+Power on
+
+-- Mute
+> python avc.py -i 192.168.1.40 mute off
+Mute off
+
+-- Toggle
+> python avc.py -i 192.168.1.40 toggle power
+Power off
+
+> python avc.py -i 192.168.1.40 toggle mute
+Mute on
+
 -- Get current volume
 > python avc.py -i 192.168.1.40 volume
 -50.5dB
@@ -29,10 +44,26 @@ Yamaha[ip='192.168.1.40', model='RX-V577']
 > python avc.py -i 192.168.1.40 input
 HDMI1
 
+-- All inputs
+> python avc.py -i 192.168.1.40 list input
+HDMI4
+AV1
+AV6
+HDMI3
+HDMI6
+AV5
+HDMI1
+HDMI2
+USB
+HDMI5
+AV2
+AV3
+AV4
+AUX
+
 -- Set input
 > python avc.py -i 192.168.1.40 input AV1
 AV1
-
 ```
 
 ### As python module
@@ -64,7 +95,7 @@ print(c.scenes)
 c.scene = 'Scene 3'
 
 # Device inputs
-print(c.intputs)
+print(c.inputs)
 #Output:
 # {'HDMI4': 'HDMI4', 'TV': 'AV1', 'AV6': 'AV6', 'HDMI3': 'HDMI3', 'HDMI6': 'HDMI6', 'AV5': 'AV5', 'PC': 'HDMI1', 'HDMI2': 'HDMI2', 'USB': 'USB', 'HDMI5': 'HDMI5', 'AV2': 'AV2', 'AV3': 'AV3', 'AV4': 'AV4', 'AUX': 'AUX'}
 
