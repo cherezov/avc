@@ -15,7 +15,7 @@ __in progress__
 ### As console app
 ##### Overview
 ```shell
-avc.py [-i <ip> [power|mute [on|off|toggle]] | [input|scene [list|<value>]] | [volume [<value>]]
+avc.py [<ip> [power|mute [on|off|toggle]] | [input|scene [list|<value>]] | [volume [<value>]]
 ```
 
 ##### Discover
@@ -32,33 +32,33 @@ Yamaha[ip='192.168.1.40', model='RX-V577']
 ##### On/off/toggle
 ```shell
 # Power on/off
-> python avc.py -i 192.168.1.40 power on
+> python avc.py 192.168.1.40 power on
 Power on
 
-> python avc.py -i 192.168.1.40 power toggle
+> python avc.py 192.168.1.40 power toggle
 Power off
 
 # Mute
-> python avc.py -i 192.168.1.40 mute off
+> python avc.py 192.168.1.40 mute off
 Mute off
 
-> python avc.py -i 192.168.1.40 mute toggle
+> python avc.py 192.168.1.40 mute toggle
 Mute on
 ```
 ##### Volume
 ```shell
 # Get current volume
-> python avc.py -i 192.168.1.40 volume
+> python avc.py 192.168.1.40 volume
 -50.5dB
 
 # Volume up
-> python avc.py -i 192.168.1.40 volume +1.5
+> python avc.py 192.168.1.40 volume +1.5
 -49dB
 ```
 ##### Input
 ```shell
 # List all inputs
-> python avc.py -i 192.168.1.40 input list
+> python avc.py 192.168.1.40 input list
 HDMI4
 AV1
 AV6
@@ -75,35 +75,35 @@ AV4
 AUX
 
 # Get current input
-> python avc.py -i 192.168.1.40 input
+> python avc.py 192.168.1.40 input
 HDMI1
 
 # Set input
-> python avc.py -i 192.168.1.40 input AV1
+> python avc.py 192.168.1.40 input AV1
 AV1
 ```
 
 ##### Scene
 ```shell
 # List all scenes
-> python avc.py -i 192.168.1.40 scene list
+> python avc.py 192.168.1.40 scene list
 Scene 1
 Scene 2
 Scene 3
 Scene 4
 
 # Get current scene (input actually)
-> python avc.py -i 192.168.1.40 scene
+> python avc.py 192.168.1.40 scene
 HDMI1
 
 # Set scene
-> python avc.py -i 192.168.1.40 scene Scene1
+> python avc.py 192.168.1.40 scene Scene1
 NET RADIO
 ```
 
 ### As python module
 ```python
-c = Avc('192.168.1.40')
+c = Avc(ip='192.168.1.40')
 
 # Toggle power
 c.power = not c.power
@@ -136,5 +136,4 @@ print(c.inputs)
 
 # Set PC input
 c.input = 'HDMI1'
-
 ```
